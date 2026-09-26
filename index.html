@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Ciudad Favorita - París</title>
+    <style>
+        /* Variables de color y estilos generales */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        /* Menú de navegación */
+        nav {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Layout Principal con Grid */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Secciones y Artículos */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        section, article, aside {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        /* Estilos de elementos de texto */
+        mark {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        blockquote {
+            background-color: #f1f3f5;
+            border-left: 4px solid var(--accent-color);
+            margin: 15px 0;
+            padding: 15px;
+            font-style: italic;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d63384;
+        }
+
+        /* Panel lateral (Aside) */
+        aside h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 8px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e9ecef;
+        }
+
+        aside li:last-child {
+            border-bottom: none;
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Encabezado Principal -->
+        <header>
+            <h1>París</h1>
+            <h2>La Ciudad de la Luz y del Amor</h2>
+        </header>
+
+        <!-- Menú de Navegación -->
+        <nav>
+            <ul>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#turismo">Lugares Turísticos</a></li>
+                <li><a href="#comida">Comida Típica</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-layout">
+            <!-- Contenido Principal -->
+            <main>
+                <!-- Sección de Historia -->
+                <section id="historia">
+                    <h2>Historia de la Ciudad</h2>
+                    <p>
+                        París fue fundada en el siglo III a.C. por la tribu gala de los <em>Parisii</em>. Con el paso de los siglos, se convirtió en el centro cultural, político y económico de Francia. Es conocida mundialmente como <mark>La Ciudad de la Luz</mark> debido a su liderazgo durante la Era de la Ilustración y por ser una de las primeras ciudades en instalar alumbrado público con gas.
+                    </p>
+                </section>
+
+                <!-- Sección de Lugares Turísticos -->
+                <section id="turismo">
+                    <h2>Lugares Turísticos</h2>
+                    <p>
+                        Entre los monumentos más emblemáticos de París destaca la famosa <strong>Torre Eiffel</strong>, construida por el ingeniero Gustave Eiffel para la Exposición Universal de 1889. Otro lugar imperdible es el Museo del Louvre, hogar de la <abbr title="Mona Lisa">Gioconda</abbr>, así como la imponente catedral de Notre Dame.
+                    </p>
+                </section>
+
+                <!-- Sección de Comida Típica -->
+                <section id="comida">
+                    <h2>Comida Típica</h2>
+                    <p>
+                        La gastronomía parisina es famosa por su refinamiento. Entre sus platos tradicionales destacan el <strong>Ratatouille</strong>, los crujientes <em>croissants</em> recién horneados, la clásica sopa de cebolla y la variedad de quesos artesanales acompañados de una tradicional baguette.
+                    </p>
+                </section>
+
+                <!-- Artículo con un dato curioso -->
+                <article>
+                    <h2>¿Sabías que...?</h2>
+                    <p>
+                        Originalmente, la Torre Eiffel estaba pensada para ser una estructura temporal que se demolería después de 20 años.
+                    </p>
+                    <blockquote>
+                        "La belleza de París reside en la armonía entre su arquitectura clásica y la historia viva que se respira en cada una de sus calles."
+                    </blockquote>
+                    <p>
+                        Si deseas buscar la ubicación geográfica exacta en un mapa, sus coordenadas aproximadas son <code>48.8566° N, 2.3522° E</code>.
+                    </p>
+                </article>
+            </main>
+
+            <!-- Panel Lateral (Datos adicionales) -->
+            <aside>
+                <h3>Datos Rápidos</h3>
+                <ul>
+                    <li><strong>País:</strong> Francia</li>
+                    <li><strong>Población:</strong> ~2.1 millones (área urbana: 11 millones)</li>
+                    <li><strong>Moneda:</strong> Euro (€)</li>
+                    <li><strong>Idioma:</strong> Francés</li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>Página creada por: <strong>Manuel Morales</strong></p>
+        </footer>
+    </div>
+
+</body>
+</html>
